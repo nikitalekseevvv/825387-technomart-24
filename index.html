@@ -8,7 +8,9 @@
     
     <header class="main-header">
       <section class="shop-panel">
-        <img class="shop-panel-logo" src="img/logo.svg" width="111" height="18" alt="Логотип Техномарт">
+        <a>
+          <img class="shop-panel-logo" src="img/logo.svg" width="111" height="18" alt="Логотип Техномарт">
+        </a>
         <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
           <label for="header-search">Поиск:</label>
           <input id="header-search" type="search" name="search" placeholder="">
@@ -69,15 +71,16 @@
   
   <footer class="main-footer">
     <section class="main-footer-up">
-      
-      <img class="main-footer-logo" src="img/logo.svg" width="138" height="23" alt="Логотип Техномарт">
+      <a>
+        <img class="main-footer-logo" src="img/logo.svg" width="138" height="23" alt="Логотип Техномарт">
+      </a>
       <p class="footer-contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         <a href="tel:+78125550555">+7 (812) 555-05-55</a>
       </p>
       
       <div class="footer-nav">
-                <ul class="footer-nav-first">
+        <ul class="footer-nav-first">
           <li><a href="about_us.html">Компания</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -100,9 +103,9 @@
 
       <div class="social-and-link">
       <ul class="footer-social">
-        <li class="footer-social-item social-item-vk"><a href="#">Техномарт в вконтакте</a></li>
-        <li class="footer-social-item social-item-fb"><a href="#">Техномарт в фейсбуке</a></li>
-        <li class="footer-social-item social-item-ig"><a href="#">Техномарт в инстаграме</a></li>
+        <li class="footer-social-item social-item-vk"><a href="#"><span class="visually-hidden">Техномарт в вконтакте</span></a></li>
+        <li class="footer-social-item social-item-fb"><a href="#"><span class="visually-hidden">Техномарт в фейсбуке</span></a></li>
+        <li class="footer-social-item social-item-ig"><a href="#"><span class="visually-hidden">Техномарт в инстаграме</span></a></li>
       </ul>
       <p class="footer-link">
         Обратная связь:
@@ -119,12 +122,12 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта проезда</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <!-- Здесь будет карта -->
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Написать нам</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
       <label for="feedback-name">Ваше имя:</label><input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
       <label for="feedback-email">Ваш e-mail:</label><input id="feedback-email" type="email" name="email" placeholder="email@example.com">
