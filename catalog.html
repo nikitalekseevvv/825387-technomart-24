@@ -5,10 +5,16 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
+   
     <header class="main-header">
       <section class="shop-panel">
-        <img class="shop-panel-logo" src="img/logo.svg" width="111" height="18" alt="Логотип Техномарт">
-        <!-- Здесь будет форма поиска -->
+        <a href="index.html">
+          <img class="shop-panel-logo" src="img/logo.svg" width="111" height="18" alt="Логотип Техномарт">
+        </a>
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+          <label for="header-search">Поиск:</label>
+          <input id="header-search" type="search" name="search" placeholder="">
+        </form>
         <a class="shop-panel-bookmarks" href="#">Закладки: <span class="bookmarks-sum">0</span></a>
         <a class="shop-panel-cart shop-panel-added" href="#">Корзина: <span class="cart-sum">10</span></a>
         <a class="shop-panel-order" href="#">Оформить заказ</a>
@@ -54,7 +60,22 @@
     
     <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filters" action="https://echo.htmlacademy.ru" method="post">
+          <p>Производители:</p>
+          <ul>
+            <li><label><input type="checkbox" name="manufacturer" value="bosch" checked>Bosch</label></li>
+            <li><label><input type="checkbox" name="manufacturer" value="interscope">Интерскоп</label></li>
+            <li><label><input type="checkbox" name="manufacturer" value="makita" checked>Makita</label></li>
+            <li><label><input type="checkbox" name="manufacturer" value="dewalt">Dewalt</label></li>
+            <li><label><input type="checkbox" name="manufacturer" value="hitachi">Hitachi</label></li>
+          </ul>
+          <p>Питание:</p>
+          <ul>
+            <li><label><input type="radio" name="power" value="battery" checked>Аккумуляторные</label></li>
+            <li><label><input type="radio" name="power" value="network">Сетевые</label></li>
+          </ul>
+          <input id="filters" type="submit" value="Показать">
+        </form>
     </section>
 
     <section class="catalog">
@@ -203,22 +224,28 @@
 
       <div class="social-and-link">
       <ul class="footer-social">
-        <li class="footer-social-item social-item-vk"><a href="#">Вконтакте</a></li>
-        <li class="footer-social-item social-item-fb"><a href="#">Фейсбук</a></li>
-        <li class="footer-social-item social-item-ig"><a href="#">Инстаграм</a></li>
+        <li class="footer-social-item social-item-vk"><a href="#">Техномарт в вконтакте</a></li>
+        <li class="footer-social-item social-item-fb"><a href="#">Техномарт в фейсбуке</a></li>
+        <li class="footer-social-item social-item-ig"><a href="#">Техномарт в инстаграме</a></li>
       </ul>
       <p class="footer-link">
         Обратная связь:
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a href="mailto:mail@htmlacademy.ru" aria-label="Написать разработчику">mail@htmlacademy.ru</a>
       </p>
       <p class="footer-link">
         Разработано &ndash;
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт разработчика">htmlacademy.ru</a>
       </p>
     </div>
     </section>
 
   </footer>
+  <section class="modal modal-buy">
+    <p>Товар добавлен в корзину</p>
+    <button class="modal-close" type="button">Закрыть</button>
+    <a class="button" href="buy.html">Оформить заказ</a>
+    <button class="modal-close-buy" type="button">Продолжить покупки</button>
+  </section>
 
   </body>
 </html>

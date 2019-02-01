@@ -9,7 +9,10 @@
     <header class="main-header">
       <section class="shop-panel">
         <img class="shop-panel-logo" src="img/logo.svg" width="111" height="18" alt="Логотип Техномарт">
-        <!-- Здесь будет форма поиска -->
+        <form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+          <label for="header-search">Поиск:</label>
+          <input id="header-search" type="search" name="search" placeholder="">
+        </form>
         <a class="shop-panel-bookmarks" href="#">Закладки: <span class="bookmarks-sum">0</span></a>
         <a class="shop-panel-cart" href="#">Корзина: <span class="cart-sum">0</span></a>
         <a class="shop-panel-order" href="#">Оформить заказ</a>
@@ -22,8 +25,8 @@
           <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <ul class="user-nav">
-          <li><a class="login-link">Войти</a></li>
-          <li><a class="check-in-link">Регистрация</a></li>
+          <li><a class="login-link" href="login.html">Войти</a></li>
+          <li><a class="check-in-link" href="registration.html">Регистрация</a></li>
         </ul>
       </section>
 
@@ -57,10 +60,10 @@
     <section class="main-contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-      <a href="#">
+      <a class="contacts-map" href="map.html">
         <img src="img/map-preview.jpg" width="300" height="158" alt="Схема проезда">
       </a>
-      <a class="button" href="#">Заблудились? Напишите нам!</a>
+      <a class="button" href="feedback.html">Заблудились? Напишите нам!</a>
     </section>
   </main>
   
@@ -97,17 +100,17 @@
 
       <div class="social-and-link">
       <ul class="footer-social">
-        <li class="footer-social-item social-item-vk"><a href="#">Вконтакте</a></li>
-        <li class="footer-social-item social-item-fb"><a href="#">Фейсбук</a></li>
-        <li class="footer-social-item social-item-ig"><a href="#">Инстаграм</a></li>
+        <li class="footer-social-item social-item-vk"><a href="#">Техномарт в вконтакте</a></li>
+        <li class="footer-social-item social-item-fb"><a href="#">Техномарт в фейсбуке</a></li>
+        <li class="footer-social-item social-item-ig"><a href="#">Техномарт в инстаграме</a></li>
       </ul>
       <p class="footer-link">
         Обратная связь:
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a href="mailto:mail@htmlacademy.ru" aria-label="Написать разработчику">mail@htmlacademy.ru</a>
       </p>
       <p class="footer-link">
         Разработано &ndash;
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт разработчика">htmlacademy.ru</a>
       </p>
     </div>
     </section>
@@ -116,13 +119,18 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта проезда</h2>
-    <span class="modal-close">x</span>
+    <button class="modal-close" type="button">Закрыть</button>
     <!-- Здесь будет карта -->
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Написать нам</h2>
-    <span class="modal-close">x</span>
-    <!-- Здесь будет форма обратной связи -->
+    <button class="modal-close" type="button">Закрыть</button>
+    <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+      <label for="feedback-name">Ваше имя:</label><input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+      <label for="feedback-email">Ваш e-mail:</label><input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+      <label for="feedback-text">Текст письма:</label><textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+      <input id="feedback-submit" type="submit" value="Отправить">
+    </form>
   </section>
   </body>
 </html>
