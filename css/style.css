@@ -1,0 +1,226 @@
+/* Общие стили */
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+
+	color: #000000;
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Стили шапки */
+.main-header {
+	background-color: #f4f7f9;
+	font-family: "Cuprum", Tahoma, sans-serif;
+}
+
+/* Стили для верхней панели шапки */
+
+.shop-panel {
+	font-size: 17px;
+	line-height: 18px;
+
+	background-color: #293449;
+}
+
+.shop-panel-logo {
+	background-color: #ee3643;
+	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.shop-panel-logo:hover {
+	background-color: #ca2c37;
+}
+
+.shop-panel-logo:active {
+	background-color: #ba2732;
+}
+
+.shop-panel a {
+	color: #ffffff;
+}
+
+.header-search label {
+	color: white;
+}
+
+.header-search input {
+	border: none;
+	background-color: transparent;
+}
+
+.header-search:hover,
+.shop-panel-bookmarks:hover,
+.shop-panel-cart:hover {
+	background-color: #212a3a;
+}
+
+.shop-panel-bookmarks:active,
+.shop-panel-cart:active {
+	background-color: #161d29;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.header-search:focus {
+	background-color: white;
+	color: #000000;
+}
+
+.header-search input:focus {
+	outline: none;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.shop-panel-order {
+	background-color: #63a63e;
+}
+
+.shop-panel-order:hover {
+	background-color: #5fbb2d;
+}
+
+.shop-panel-order:active {
+	background-color: #293449;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Стили для основной части шапки */
+
+.header-info-title {
+	font-style: italic;
+	font-size: 16px;
+	line-height: 23px;
+	color: #ee3643;
+}
+
+.header-phone {
+	font-size: 21px;
+	line-height: 21px;
+	color: #ee3643;
+
+	border: 3px solid #ffffff;
+}
+
+.header-address {
+	font-size: 14px;
+	line-height: 24px;
+	align-items: center;
+}
+
+.user-nav a {
+	font-size: 21px;
+	line-height: 21px;
+	
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.user-nav a:hover {
+	color: #ee3643;
+}
+
+.user-nav a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* Стили основного меню */
+
+.main-nav {
+	font-size: 17px;
+	line-height: 17px;
+	background-color: #32425c;
+	color: #ffffff;
+	
+	box-shadow: inset 0px -5px 0 0 #293449;
+}
+
+.main-nav-item:hover {
+	background-color: #293449;
+}
+
+.main-nav-item:active {
+	background-color: #1d2739;
+}
+
+.main-nav ul {
+	list-style: none;
+}
+
+.main-nav-item a {
+	color: white;
+}
+
+.main-nav-item:active a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*Стили для футера*/
+
+.main-footer {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #f1f5f7;
+	background-color: #32425c;
+}
+
+.main-footer a {
+	color: white;
+}
+
+.main-footer-logo {
+	background-color: #ee3643;
+	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.main-footer ul {
+	list-style: none;
+}
+
+.footer-nav a:hover {
+	text-decoration: underline;
+}
+
+.footer-nav a:active {
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.footer-nav-second a {
+	color: #ffd180;
+}
+
+.footer-information {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.footer-social-item {
+	background-color: #212a3a;
+}
+
+.footer-social-item:hover {
+	background-color: #ee3643
+}
+
+.footer-link a {
+	color: #ffd180;
+}
+
+.footer-link a:hover {
+	text-decoration: underline;
+}
+
+.footer-link a:active {
+	color: #ee3643;
+	text-decoration: none;
+}
