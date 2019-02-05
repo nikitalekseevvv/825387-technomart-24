@@ -16,6 +16,15 @@ a {
 	text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
+}
+
 /* Стили шапки */
 .main-header {
 	background-color: #f4f7f9;
@@ -48,16 +57,17 @@ a {
 	color: #ffffff;
 }
 
-.header-search label {
-	color: white;
-}
-
 .header-search input {
 	border: none;
 	background-color: transparent;
+	outline: 0;
 }
 
-.header-search:hover,
+.header-search input::placeholder {
+	color: white;
+}
+
+.header-search input:hover,
 .shop-panel-bookmarks:hover,
 .shop-panel-cart:hover {
 	background-color: #212a3a;
@@ -69,15 +79,8 @@ a {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-.header-search:focus {
-	background-color: white;
-	color: #000000;
-}
-
 .header-search input:focus {
-	outline: none;
-	background-color: #ffffff;
-	color: #000000;
+	background-color: white;
 }
 
 .shop-panel-order {
@@ -162,6 +165,45 @@ a {
 .main-nav-item:active a {
 	color: rgba(255, 255, 255, 0.5);
 }
+
+/*Стили для основного контейнера*/
+
+.container {
+	background-color: #ffffff;
+}
+
+.container h2 {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.main-about-us li {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.button {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+
+	color: white;
+	background-color: #ee3643;
+}
+
+.button:hover {
+	background-color: #ca2c37;
+}
+
+.button:active {
+	background-color: #ba2732;
+}
+
 
 /*Стили для футера*/
 
