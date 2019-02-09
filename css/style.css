@@ -56,7 +56,16 @@ a {
 	margin-right: auto;
 	margin-left: auto;
 	display: flex;
-	justify-content: space-between;
+
+}
+
+.first-part-panel {
+	display: flex;
+
+}
+
+.second-part-panel {
+	display: flex;
 }
 
 .shop-panel-logo {
@@ -89,8 +98,7 @@ a {
 }
 
 .header-search {
-	width: 240px;
-	margin-left: 10px;
+	width: 270px;
 }
 
 .header-search input {
@@ -105,12 +113,10 @@ a {
 
 .shop-panel-bookmarks {
 	width: 150px;
-	margin-left: 10px;
 }
 
 .shop-panel-cart {
 	width: 140px;
-	margin-left: 10px;
 }
 
 .header-search input:hover,
@@ -135,7 +141,6 @@ a {
 .shop-panel-order {
 	background-color: #63a63e;
 	width: 150px;
-	margin-left: 10px;
 }
 
 .shop-panel-order:hover,
@@ -347,10 +352,7 @@ a {
 	justify-content: space-between;
 }
 
-.main-about-us {
-	width: 540px;
-	margin-right: 100px;
-}
+
 
 .main-about-us .button {
 	width: 220px;
