@@ -97,32 +97,110 @@ a {
 	color: #ffffff;
 }
 
+/* Форма поиска */
+
+
 .header-search {
-	width: 270px;
+	width: 253px;
+	display: flex;
+	align-items: stretch;
+	padding-left: 17px;
 }
 
-.header-search input {
+.header-search svg {
+	margin-top: 12px;
+	margin-right: 15px;
+	fill: white;
+	opacity: 0.3;
+}
+
+.header-search:hover svg {
+	opacity: 1;
+}
+
+.search-field {
 	border: none;
 	background-color: transparent;
 	outline: 0;
+	width: 100%;
+}
+
+.search-field:focus {
+	background-color: white;
+}
+
+.search-field:focus .header-search {
+	background-color: white;
+}
+
+
+.header-search:active .search-icon {
+	fill: red;
 }
 
 .header-search input::placeholder {
 	color: white;
 }
 
+/* Закладки и корзина */
+
 .shop-panel-bookmarks {
-	width: 150px;
+	width: 100px;
+	padding-left: 50px;
+	padding-top: 12px;
+	position: relative;
+
+}
+
+.shop-panel-bookmarks::before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 17px;
+	width: 14px;
+	height: 16px;
+	background-image: url("../img/icon-bookmark.svg");
+	opacity: 0.3;
+}
+
+.shop-panel-bookmarks:hover::before {
+	opacity: 1;
+}
+
+.shop-panel-bookmarks:active::before  {
+	opacity: 0.5;
 }
 
 .shop-panel-cart {
-	width: 140px;
+	width: 100px;
+	padding-left: 50px;
+	padding-top: 12px;
+	position: relative;
 }
 
-.header-search input:hover,
+
+.shop-panel-cart::before {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 18px;
+	width: 15px;
+	height: 15px;
+	background-image: url("../img/icon-cart.svg");
+	opacity: 0.3;
+}
+
+.shop-panel-cart:hover::before {
+	opacity: 1;
+}
+
+.shop-panel-cart:active::before {
+	opacity: 0.5;
+}
+
+.header-search:hover,	
 .shop-panel-bookmarks:hover,
 .shop-panel-cart:hover,
-.header-search input:focus,
 .shop-panel-bookmarks:focus,
 .shop-panel-cart:focus {
 	background-color: #212a3a;
@@ -134,13 +212,16 @@ a {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-.header-search input:focus {
-	background-color: white;
-}
-
 .shop-panel-order {
 	background-color: #63a63e;
 	width: 150px;
+	display: flex;
+	padding-top: 12px;  
+}
+
+.shop-panel-order span {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .shop-panel-order:hover,
@@ -149,7 +230,7 @@ a {
 }
 
 .shop-panel-order:active {
-	background-color: #293449;
+	background-color: #518534;
 	color: rgba(255, 255, 255, 0.5);
 }
 
@@ -166,7 +247,6 @@ a {
 	margin-left: auto;
 	margin-bottom: 35px;
 	display: flex;
-	justify-content: space-between;
 }
 
 .header-info-title {
@@ -182,8 +262,7 @@ a {
 }
 
 .header-info-contacts {
-	width: 320px;
-	margin-left: 60px;
+	margin-left: 76px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -191,6 +270,7 @@ a {
 }
 
 .header-phone {
+	position: relative;
 	font-size: 21px;
 	line-height: 21px;
 	color: #ee3643;
@@ -199,22 +279,17 @@ a {
 	padding-bottom: 9px;
 	padding-right: 49px;
 	padding-left: 71px;
+	margin-bottom: 5px;
 }
 
 .header-phone::before {
 	content: "";
-	
 	position: absolute;
-
-	left: 0;
-	
+	left: 13px;
+	top: 10px;
 	width: 18px;
 	height: 20px;
-
-	border: 1px solid red;
-
-	background-image: url("../img/icon-phone.png");
-
+	background-image: url("../img/icon-phone.svg");
 }
 
 .header-address {
@@ -223,14 +298,16 @@ a {
 	align-items: center;
 	color: #32425c;
 	display: block;
+	margin: 0px;
+	padding: 0px;
 }
 
 .user-nav {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	width: 300px;
-	margin-left: 10px;
+
+	margin-left: 55px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -238,7 +315,8 @@ a {
 .user-nav a {
 	font-size: 21px;
 	line-height: 21px;
-	
+	padding-top: 12px;
+	padding-bottom: 12px;
 	color: #000000;
 	background-color: #ffffff;
 }
@@ -253,14 +331,35 @@ a {
 }
 
 .login-link {
-	width: 120px;
+	padding-left: 48px; 
 	display: block;
-	margin-left: 20px;
+	padding-right: 27px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.login-link::before {
+	content: "";
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	width: 20px;
+	height: 17px;
+	background-image: url("../img/icon-login.svg");
+}
+
+.login-link:hover::before {
+	background-image: url("../img/icon-login2.png");
+}
+
+.login-link:active::before {
+	background-image: url("../img/icon-login.svg");
 }
 
 .check-in-link {
-	width: 150px;
 	display: block;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 .username-panel {
 	width: 300px;
@@ -312,17 +411,12 @@ a {
 	line-height: 17px;
 	background-color: #32425c;
 	color: #ffffff;
-	width: 920px;
-	padding-left: 10px;
-	padding-right: 10px;
+	width: 940px;
 	margin-right: auto;
 	margin-left: auto;
 	box-shadow: 0px 5px 0 0 #293449;
 }
 
-.main-nav-item {
-	padding-top: 22px;
-}
 
 .main-nav-item:hover,
 .main-nav-item:focus {
@@ -338,12 +432,21 @@ a {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-around;
-	height: 60px;
+	padding-right: 22px;
+	padding-left: 25px;
 }
 
 .main-nav-item a {
 	color: white;
+
+}
+
+.main-nav-item 	{
+	display: block;
+	padding-top: 19px;
+	padding-bottom: 19px;
+	padding-right: 30px;
+	padding-left: 30px;
 }
 
 .main-nav-item:active a {
