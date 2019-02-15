@@ -366,23 +366,46 @@ a {
 	padding-left: 25px;
 	padding-right: 25px;
 }
+
 .username-panel {
-	width: 300px;
-	
+	width: 299px;
+	margin-left: 41px;
+}
+
+.username-block {
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.username::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 18px;
+	top: 13px;
+	left: 13px;
+	background-image: url(../img/icon-user.svg);
 }
 
 .username {
 	font-size: 21px;
 	line-height: 21px;
 	color: #000000;
-	background-color: #ffffff;
 	display: block;
-	min-height: 30px;
-	margin-bottom: 10px;
+	margin-left: 47px;
+	margin-top: 14px;
+	margin-bottom: 11px;
 }
 
 .username:active {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.username-block svg {
+	margin-top: 14px;
+	margin-right: 10px;
 }
 
 .user-nav-option {
@@ -398,6 +421,10 @@ a {
 	line-height: 18px;
 	color: #32425c;
 	text-decoration: underline;
+}
+
+.first-option {
+	margin-right: 32px;
 }
 
 .user-nav-option a:hover,
@@ -430,6 +457,10 @@ a {
 
 .main-nav-item:active {
 	background-color: #1d2739;
+}
+
+.main-nav-item:active a {
+	color: #f1f5f7;
 }
 
 .main-nav ul {
@@ -758,11 +789,25 @@ ul.footer-nav-second {
 	margin: 0;
 	display: flex;
 	min-height: 40px;
+	margin-top: 23px;
 }
 .breadcrumbs a {
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
+	color: #000000;
+	margin-right: 40px;
+	position: relative;
+}
+
+.breadcrumbs-link::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	right: -24px;
+	width: 8px;
+	height: 12px;
+	background-image: url("../img/icon-right-small.svg");
 }
 
 .name-catalog {
@@ -770,12 +815,15 @@ ul.footer-nav-second {
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
-
 	color: #32425c;
 	background-color: #f2f6f8;
 	font-weight: normal;
-	min-height: 60px;
 	padding: 0;
+	margin: 0;
+	padding-top: 33px;
+	padding-bottom: 35px;
+	padding-left: 30px;
+	margin-bottom: 30px;
 }
 
 .shoping-index {
@@ -783,15 +831,23 @@ ul.footer-nav-second {
 }
 
 .filters {
-	width: 220px;
 	margin-right: 20px;
 }
 
-.filters p {
+.filters fieldset {
+	width: 220px;
+	padding: 0;
+  	margin: 0;
+  	margin-bottom: 30px;
+  	border: none;
+}
+
+.filters legend {
 	font-size: 17px;
 	line-height: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-bottom: 14px;
 }
 
 .filters ul {
@@ -804,6 +860,56 @@ ul.footer-nav-second {
 	font-size: 15px;
 	line-height: 20px;
 	text-transform: uppercase;
+	position: relative;
+  	display: block;
+  	cursor: pointer;
+  	user-select: none;
+}
+
+.filter-option {
+	margin-bottom: 19px;
+	padding-left: 38px;
+	position: relative;
+}
+
+.filter-input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: -35px;
+	width: 23px;
+	height: 23px;
+	background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-input-checkbox:checked + label::after {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: -35px;
+	width: 27px;
+	height: 23px;
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-radio + label::before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	background-image: url("../img/radio-off.svg");
+}
+
+.filter-input-radio:checked + label::after {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -35px;
+	width: 25px;
+	height: 25px;
+	background-image: url("../img/radio-on.svg");
 }
 
 .show-result {
@@ -811,10 +917,17 @@ ul.footer-nav-second {
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
-
+	padding-top: 12px;
+	padding-bottom: 11px;
+	padding-right: 39px;
+	padding-left: 39px;
+	border-radius: 3px;
 	background-color: white;
 	border: 1px solid #e5e5e5;
+	margin-top: 35px;
 }
+
+/* Каталог */
 
 .catalog-list {
 	list-style: none;
@@ -830,14 +943,29 @@ ul.footer-nav-second {
 	width: 219px;
 	margin-bottom: 20px;
 	min-height: 318px;
+	position: relative;
+}
+
+.new-item::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 60px;
+	height: 59px;
+	background-image: url("../img/new-flag.png");
 }
 
 .catalog-item-name {
+	display: block;
+	min-height: 40px;
+	padding: 0 25px;
+	margin-top: 10px;
+	margin-bottom: 15px;   
 	font-size: 18px;
 	line-height: 20px;
-  	font-weight: bold;
-  	text-align: center;
-  	color: black;
+	text-align: center;
+	color: black;
 }
 
 .old-price {
@@ -845,33 +973,87 @@ ul.footer-nav-second {
 	line-height: 18px;
   	font-weight: bold;
   	text-align: center;
-  	text-decoration: line-through;
   	color: #999999;
+  	display: block;
+ 	min-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-decoration: line-through;
 }
 
 .new-price {
+	display: block;
 	font-size: 17px;
 	line-height: 18px;
   	font-weight: bold;
-  	text-align: center;
-  	
-  	color: white;
-  	background-color: #f03644;
+	position: relative;
+	width: 80px;
+	margin: 10px auto;
+	margin-bottom: 20px;
+	padding: 10px 30px;
+	color: white;
+	background: #ee3643;
+	border-radius: 3px;
+}
+.new-price::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 0;
+	height: 0;
+	border: 19px solid white;
+	border-left-color: #ee3643;
 }
 
-.catalog-item-option li {
+.catalog-item-option {
 	list-style: none;
 	font-family: "Cuprum", Tahoma, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
 	text-align: center;
+	visibility: hidden;
+	position: absolute;
+}
+
+.catalog-item-buy {
+	position: relative;
 }
 
 .catalog-item-buy a {
 	color: white;
 	box-shadow: inset 0px -3px 0 0 #367315;
   	background-color: #63a63e;
+  	display: flex;
+  	height: 38px;
+  	width: 135px;
+  	border-radius: 3px;
+  	justify-content: center;
+  	align-items: center;
+  	margin-bottom: 8px;
+  }
+
+.catalog-item-buy a:before {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 14px;
+	width: 15px;
+	height: 15px;
+	background-image: url("../img/icon-cart.svg");
+	opacity: 0.3;
+}
+
+.catalog-item:hover .catalog-item-option {
+	visibility: visible;
+	top: 43px;
+	left: 0px;
+
+}
+
+.catalog-item:hover img {
+	visibility: hidden;
 }
 
 .catalog-item-buy a:hover,
@@ -885,19 +1067,24 @@ ul.footer-nav-second {
 }
 
 .catalog-item-mark a {
+	display: flex;
+  	border-radius: 3px;
+  	justify-content: center;
+  	align-items: center;
 	color: #32425c;
-	outline: 3px solid #63a63e;
-	outline-offset: -3px;
+	border: 3px solid #63a63e;
   	background-color: white;
+  	height: 33px;
+  	width: 129px;
 }
 
 .catalog-item-mark a:hover,
 .catalog-item-mark a:focus {
-	outline: 3px solid #32425c;
+	border: 3px solid #32425c;
 
 }
 
 .catalog-item-mark a:active {
-	outline: 3px solid #32425c;
+	border: 3px solid #32425c;
 	opacity: 0.3;
 }
