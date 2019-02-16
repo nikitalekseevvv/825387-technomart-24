@@ -144,17 +144,23 @@
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта проезда</h2>
     <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-    <!-- Здесь будет карта -->
+    <img src="img/full-map.jpg" width="940" height="446" alt="Схема проезда">
   </section>
-  <section class="modal modal-about-us">
-    <h2 class="visually-hidden">Написать нам</h2>
-    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-    <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-      <label for="feedback-name">Ваше имя:</label><input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
-      <label for="feedback-email">Ваш e-mail:</label><input id="feedback-email" type="email" name="email" placeholder="email@example.com">
-      <label for="feedback-text">Текст письма:</label><textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
-      <input id="feedback-submit" type="submit" value="Отправить">
-    </form>
+  <section class="modal modal-feedback">
+    <div class="modal-block">
+      <h2 class="visually-hidden">Написать нам</h2>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+        <ul>
+          <li class="feedback-first"><label for="feedback-name">Ваше имя:</label><input class="feedback-name" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия"></li>
+          <li><label for="feedback-email">Ваш e-mail:</label><input class="feedback-email" id="feedback-email" type="email" name="email" placeholder="email@example.com"></li>
+          <li><label for="feedback-text">Текст письма:</label><textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea></li>
+          <div class="feedback-button">
+            <li><input class="button" id="feedback-submit" type="submit" value="Отправить"></li>
+          </div>
+        </ul>
+      </form>
+    </div>
   </section>
   </body>
 </html>

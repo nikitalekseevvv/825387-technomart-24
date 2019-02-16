@@ -10,6 +10,8 @@ body {
 
 	color: #000000;
 	background-color: #ffffff;
+
+	position: relative;
 }
 
 a {
@@ -17,23 +19,142 @@ a {
 }
 
 .visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
-.modal {
-	display: none;
+.modal-map {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 647px;
+	box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+	width: 940px;
+	height: 446px;
+}
+
+.modal-map img {
+	padding: 0;
+	margin: 0;
+}
+/* Модальное окно с обратной связью */
+
+.modal-feedback {
+	position: absolute;
+	width: 620px;
+	bottom: 201px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	background-color: white;
+	border-top: 7px solid #ee3643;
+	box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-block {
+	position: relative;
+	padding-top: 48px;
+}
+
+.modal-close {
+	position: absolute;
+	background-color: transparent;
+	background-image: url("../img/icon-close.svg");
+	right: 7px;
+	top: 9px;
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.modal-feedback label {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 13px;
+}
+
+.feedback ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.feedback li {
+	display: flex;
+	flex-direction: column;
+}
+
+.feedback-first {
+	margin-right: 20px;
+	margin-left: 75px;
+}
+
+.feedback-name,
+.feedback-email {
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #a9a9a9 ;
+	display: block;
+	width: 188px;
+	height: 38px;
+	background-color: #ffffff;
+	border: 2px solid #dee3e4;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+label[for=feedback-text] {
+	margin-top: 22px;
+	margin-left: 75px;
+}
+
+.modal-feedback textarea {
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #a9a9a9 ;
+	display: block;
+	width: 432px;
+	height: 101px;
+	background-color: #ffffff;
+	border: 2px solid #dee3e4;
+	padding-top: 13px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 37px;
+	margin-left: 75px;
+}
+
+.feedback-button {
+	background: #f4f4f4;
+	padding-top: 55px;
+	padding-bottom: 44px;
+	padding-left: 75px;
+	padding-right: 75px;
+	width: 100%;
+}
+
+.feedback-button input {
+	border: none;
+	outline: none;
+	padding: 10px 199px;
+	min-height: 10px;
 }
 
 /* Стили шапки */
@@ -581,8 +702,8 @@ a {
 
 	display: block;
 	border-radius: 3px;
-	height: 26px;
 	padding-top: 12px;
+	padding-bottom: 12px;
 }
 
 .button:hover,
