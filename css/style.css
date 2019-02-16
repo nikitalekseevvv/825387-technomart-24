@@ -31,6 +31,31 @@ a {
 	overflow: hidden;
 }
 
+.button {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	background-color: #ee3643;
+	display: block;
+	border-radius: 3px;
+	padding-top: 11px;
+	padding-bottom: 9px;
+}
+
+.button:hover,
+.button:focus {
+	background-color: #ca2c37;
+}
+
+.button:active {
+	background-color: #ba2732;
+}
+
+/* Модальное окно с картой */
+
 .modal-map {
 	position: absolute;
 	z-index: 2;
@@ -225,7 +250,6 @@ label[for=feedback-text] {
 
 /* Форма поиска */
 
-
 .header-search {
 	width: 253px;
 	display: flex;
@@ -234,8 +258,8 @@ label[for=feedback-text] {
 }
 
 .header-search svg {
-	margin-top: 12px;
-	margin-right: 15px;
+	margin-top: 11px;
+	margin-right: 13px;
 	fill: white;
 	opacity: 0.3;
 }
@@ -260,19 +284,21 @@ label[for=feedback-text] {
 }
 
 
-.header-search:active .search-icon {
+.header-search:focus .search-icon {
 	fill: red;
 }
 
 .header-search input::placeholder {
 	color: white;
+	font-size: 17px;
+	line-height: 17px;
 }
 
 /* Закладки и корзина */
 
 .shop-panel-bookmarks {
-	width: 100px;
-	padding-left: 50px;
+	width: 105px;
+	padding-left: 44px;
 	padding-top: 12px;
 	position: relative;
 
@@ -298,7 +324,7 @@ label[for=feedback-text] {
 }
 
 .shop-panel-cart {
-	width: 100px;
+	width: 101px;
 	padding-left: 50px;
 	padding-top: 12px;
 	position: relative;
@@ -308,8 +334,8 @@ label[for=feedback-text] {
 .shop-panel-cart::before {
 	content: "";
 	position: absolute;
-	top: 13px;
-	left: 18px;
+	top: 12px;
+	left: 19px;
 	width: 15px;
 	height: 15px;
 	background-image: url("../img/icon-cart.svg");
@@ -371,7 +397,7 @@ label[for=feedback-text] {
 	padding-right: 10px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 35px;
+	margin-bottom: 38px;
 	display: flex;
 }
 
@@ -385,10 +411,11 @@ label[for=feedback-text] {
 	width: 200px;
 	margin-left: 53px;
 	display: block;
+	padding-top: 1px;
 }
 
 .header-info-contacts {
-	margin-left: 76px;
+	margin-left: 67px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -402,7 +429,7 @@ label[for=feedback-text] {
 	color: #ee3643;
 	border: 3px solid #ffffff;
 	padding-top: 9px;
-	padding-bottom: 9px;
+	padding-bottom: 8px;
 	padding-right: 49px;
 	padding-left: 71px;
 	margin-bottom: 5px;
@@ -411,10 +438,10 @@ label[for=feedback-text] {
 .header-phone::before {
 	content: "";
 	position: absolute;
-	left: 13px;
+	left: 12px;
 	top: 10px;
-	width: 18px;
-	height: 20px;
+	width: 19px;
+	height: 19px;
 	background-image: url("../img/icon-phone.svg");
 }
 
@@ -432,8 +459,7 @@ label[for=feedback-text] {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-
-	margin-left: 55px;
+	margin-left: 68px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -441,10 +467,10 @@ label[for=feedback-text] {
 .user-nav a {
 	font-size: 21px;
 	line-height: 21px;
-	padding-top: 12px;
+	padding-top: 11px;
 	padding-bottom: 12px;
 	color: #000000;
-	background-color: #ffffff;
+	background-color: white;
 }
 
 .user-nav a:hover,
@@ -457,18 +483,18 @@ label[for=feedback-text] {
 }
 
 .login-link {
-	padding-left: 48px; 
+	padding-left: 49px; 
 	display: block;
-	padding-right: 27px;
-	margin-right: 10px;
+	padding-right: 24px;
+	margin-right: 11px;
 	position: relative;
 }
 
 .login-link::before {
 	content: "";
 	position: absolute;
-	left: 14px;
-	top: 14px;
+	left: 16px;
+	top: 13px;
 	width: 20px;
 	height: 17px;
 	background-image: url("../img/icon-login.svg");
@@ -484,8 +510,8 @@ label[for=feedback-text] {
 
 .check-in-link {
 	display: block;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 
 .username-panel {
@@ -589,21 +615,28 @@ label[for=feedback-text] {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	padding-right: 22px;
-	padding-left: 25px;
 }
 
 .main-nav-item a {
 	color: white;
-
 }
 
-.main-nav-item 	{
+.main-nav-item {
 	display: block;
-	padding-top: 19px;
-	padding-bottom: 19px;
+	padding-top: 20px;
+	padding-bottom: 18px;
 	padding-right: 30px;
 	padding-left: 30px;
+}
+
+.main-nav-item:first-child {
+	padding-left: 52px;
+    padding-right: 32px;
+}
+
+.main-nav-item:last-child {
+	padding-left: 34px;
+    padding-right: 54px;
 }
 
 .main-nav-item:active a {
@@ -626,37 +659,204 @@ label[for=feedback-text] {
 	line-height: 30px;
 	text-transform: uppercase;
 	font-weight: normal;
+	margin: 0;
+	padding: 0;
 }
+
+/*Стили для контейнера с категориями и слайдером */
+
+.categories {
+	display: flex;
+	margin-top: 59px;
+}
+
+.categories-up {
+	margin-right: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category-item {
+	width: 277px;
+	min-height: 97px;
+	padding-top: 26px; 
+	padding-left: 23px;
+}
+.category-item span {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	color: white;
+}
+
+.category-button {
+	display: block;
+	width: 135px;
+	min-height: 28px;
+	padding-top: 10px;
+	margin-left: 2px;
+	margin-top: 14px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	border-radius: 3px;
+}
+
+.category-material {
+	background-color: #ffbf47;
+	position: relative;
+	margin-right: 20px;
+}
+
+.category-tool {
+	position: relative;
+	background-color: #3bbce3;
+}
+
+.category-equipment {
+	position: relative;
+	background-color: #dc91d8;
+	margin-bottom: 20px;
+}
+
+.category-discounts {
+	position: relative;
+	background-color: #8ed78f;
+	margin-bottom: 20px;
+
+}
+
+.category-delivery {
+	position: relative;
+	background-color: #ffc047;
+}
+
+.category-material::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/icon-1.svg");
+	right: 43px;
+	top: 31px;
+	width: 44px;
+	height: 65px;
+}
+
+.category-tool::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/icon-2.svg");
+	right: 28px;
+	top: 33px;
+	width: 75px;
+	height: 61px;
+}
+
+.category-equipment::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/icon-3.svg");
+	right: 31px;
+	top: 31px;
+	width: 78px;
+	height: 62px;
+}
+
+.category-discounts::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/icon-4.svg");
+	right: 45px;
+	top: 26px;
+	width: 59px;
+	height: 72px;
+}
+
+.category-delivery::after {
+	content: "";
+	position: absolute;
+	background-image: url("../img/icon-5.svg");
+	right: 31px;
+	top: 32px;
+	width: 78px;
+	height: 63px;
+}
+
+.category-slider {
+	width: 596px;
+	height: 239px;
+	margin-top: 20px;
+	background-color: black;
+	background-image: url("../img/slider-1.jpg");
+	padding-top: 27px;
+	padding-left: 24px;
+	position: relative;
+}
+
+.category-slider span {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+}
+
+.category-slider p {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.category-slider .button {
+	position: absolute;
+	bottom: 22px;
+	padding-left: 49px;
+	padding-right: 45px;
+}
+
+
+/* Стили для контейнера с информацией */
 
 .container-info {
 	display: flex;
 	justify-content: space-between;
-}
-
-.container-info {
+	margin-top: 30px;
 	font-size: 13px;
 	line-height: 24px;
 }
-
-
+.container-info h2 {
+	margin-bottom: 25px;
+}
 
 .main-about-us .button {
 	width: 220px;
 }
 
 .main-about-us p {
+	padding: 0;
+	margin: 0;
 	width: 520px;
+	letter-spacing: 0.1px;
+	margin-bottom: 25px;
 }
 
-.about-us-delivery {
-	width: 390px;
-	margin-bottom: 23px;
+p.about-us-delivery {
+	width: 400px;
+	margin-bottom: 20px;
 }
 
 .main-about-us ul {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 40px;
+	margin-bottom: 36px;
 	list-style: none;
 }
 
@@ -677,43 +877,22 @@ label[for=feedback-text] {
 	width: 25px;
 	height: 2px;
 	background-image: url(../img/li-icon.png);
-
-
 }
 
 .main-contacts p {
 	width: 190px;
-	margin-bottom: 23px;
+	margin-bottom: 30px;
 }
 
 .main-contacts img {
-	margin-bottom: 40px;
+	margin-bottom: 33px;
 }
 
-.button {
-	font-family: "Cuprum", Tahoma, sans-serif;
-	font-size: 14px;
-	line-height: 18px;
-	text-transform: uppercase;
-	text-align: center;
-
-	color: white;
-	background-color: #ee3643;
-
-	display: block;
-	border-radius: 3px;
-	padding-top: 12px;
-	padding-bottom: 12px;
+.main-contacts .button {
+	padding-left: 50px;
+	padding-right: 44px;
 }
 
-.button:hover,
-.button:focus {
-	background-color: #ca2c37;
-}
-
-.button:active {
-	background-color: #ba2732;
-}
 
 
 /*Стили для футера*/
@@ -723,7 +902,7 @@ label[for=feedback-text] {
 	font-size: 18px;
 	line-height: 24px;
 	color: #f1f5f7;
-	margin-top: 87px;
+	margin-top: 86px;
 }
 
 .footer-light {
@@ -747,11 +926,12 @@ label[for=feedback-text] {
 	margin-left: auto;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-bottom: 30px;
 }
 
 .footer-left {
 	width: 380px;
-	margin-right: 10px;
+	margin-right: 18px;
 }
 
 .main-footer-logo {
@@ -759,8 +939,8 @@ label[for=feedback-text] {
 	box-shadow: 0px 5px 0 0 rgb(181, 41, 51);
 	display: block;
 	width: 220px;
-	height: 42px;
-	padding-top: 21px;
+	height: 43px;
+	padding-top: 20px;
 	margin-bottom: 34px;
 }
 
@@ -782,7 +962,7 @@ label[for=feedback-text] {
 }
 
 .footer-nav li {
-	margin-left: 60px;
+	margin-left: 58px;
 }
 
 .footer-nav li:first-child {
@@ -856,13 +1036,15 @@ ul.footer-nav-second {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin-right: 4px;
+	position: relative;
 }
 
 .footer-social-item svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .footer-social-item:hover,
