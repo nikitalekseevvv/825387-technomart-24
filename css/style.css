@@ -182,6 +182,76 @@ label[for=feedback-text] {
 	min-height: 10px;
 }
 
+/* Модальное окно для кнопки "Купить" */
+
+.modal-buy {
+	position: absolute;
+	width: 620px;
+	top: 418px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	background-color: white;
+	border-top: 7px solid #ee3643;
+	box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-buy p {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+	margin-left: 179px;
+	margin-bottom: 68px;
+}
+
+.modal-block-buy {
+	position: relative;
+	padding-top: 75px;
+
+}
+
+.modal-block-buy::before {
+	content: "";
+	position: absolute;
+	top: 48px;
+	left: 81px;
+	width: 66px;
+	height: 66px;
+	background-image: url("../img/icon-mark.svg");
+}
+
+.modal-buy-button {
+	background-color: #f1f1f1;
+	padding-top: 37px;
+	padding-bottom: 37px;
+	padding-left: 80px;
+	padding-right: 80px;
+	display: flex;
+}
+
+.modal-buy-button .button {
+	padding-left: 59px;
+	padding-right: 62px;
+	margin-right: 20px;
+}
+
+.button-buy {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	outline: none;
+	border: none;
+	background-color: white;
+	color: black;
+	margin-right: 0;
+	padding-left: 44px;
+	padding-right: 48px;
+}
+
 /* Стили шапки */
 .main-header-panel {
 	width: 100%;
@@ -191,7 +261,6 @@ label[for=feedback-text] {
 	background-color: #f4f7f9;
 	font-family: "Cuprum", Tahoma, sans-serif;
 	padding-bottom: 65px;
-
 }
 
 /* Стили для верхней панели шапки */
@@ -207,12 +276,10 @@ label[for=feedback-text] {
 	margin-right: auto;
 	margin-left: auto;
 	display: flex;
-
 }
 
 .first-part-panel {
 	display: flex;
-
 }
 
 .second-part-panel {
@@ -515,8 +582,8 @@ label[for=feedback-text] {
 }
 
 .username-panel {
-	width: 299px;
-	margin-left: 41px;
+	width: 300px;
+	margin-left: 50px;
 }
 
 .username-block {
@@ -524,6 +591,7 @@ label[for=feedback-text] {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	margin-bottom: 4px;
 }
 
 .username::before {
@@ -531,9 +599,14 @@ label[for=feedback-text] {
 	position: absolute;
 	width: 20px;
 	height: 18px;
-	top: 13px;
-	left: 13px;
+	top: 12px;
+	left: 15px;
 	background-image: url(../img/icon-user.svg);
+	opacity: 0.3;
+}
+
+.username:hover::before {
+	opacity: 1;
 }
 
 .username {
@@ -541,9 +614,9 @@ label[for=feedback-text] {
 	line-height: 21px;
 	color: #000000;
 	display: block;
-	margin-left: 47px;
-	margin-top: 14px;
-	margin-bottom: 11px;
+	margin-left: 48px;
+	margin-top: 11px;
+	margin-bottom: 13px;
 }
 
 .username:active {
@@ -551,8 +624,18 @@ label[for=feedback-text] {
 }
 
 .username-block svg {
-	margin-top: 14px;
-	margin-right: 10px;
+	margin-top: 13px;
+	margin-right: 9px;
+	fill: #c5c5c5;
+}
+
+.username-block svg:hover,
+.username-block svg:focus {
+	fill: #32425c;
+}
+
+.username-block svg:active {
+	fill: rgba(50, 66, 92, 0.3);
 }
 
 .user-nav-option {
@@ -565,22 +648,36 @@ label[for=feedback-text] {
 
 .user-nav-option a {
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 17px;
 	color: #32425c;
-	text-decoration: underline;
+	border-bottom: 1px solid #32425c;
 }
 
 .first-option {
 	margin-right: 32px;
+	position: relative;
+}
+
+.first-option::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	background-color: #32425c;
+	width: 4px;
+	height: 4px;
+	top: 8px;
+	left: 89px;
 }
 
 .user-nav-option a:hover,
 .user-nav-option a:focus {
 	color: #ee3643;
+	border-bottom: 1px solid #ee3643;
 }
 
 .user-nav-option a:active {
 	color: rgba(50, 66, 92, 0.3);
+	border-bottom: 1px solid rgba(50, 66, 92, 0.3);
 }
 
 /* Стили основного меню */
@@ -873,7 +970,7 @@ p.about-us-delivery {
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 8px;
+	top: 9px;
 	width: 25px;
 	height: 2px;
 	background-image: url(../img/li-icon.png);
@@ -962,7 +1059,7 @@ p.about-us-delivery {
 }
 
 .footer-nav li {
-	margin-left: 58px;
+	margin-left: 59px;
 }
 
 .footer-nav li:first-child {
@@ -977,11 +1074,11 @@ p.about-us-delivery {
 }
 
 .footer-nav {
-	margin-top: 35px;
+	margin-top: 38px;
 }
 
 ul.footer-nav-second {
-	margin-top: 40px;
+	margin-top: 34px;
 }
 
 .footer-nav a:hover,
@@ -1010,17 +1107,16 @@ ul.footer-nav-second {
 }
 
 .footer-copyright {
-	width: 238px;
-	margin-top: 39px;
+	width: 250px;
+	margin-top: 37px;
 	margin-bottom: 38px;
-	margin-right: 153px;
-
+	margin-right: 140px;
+	padding-left: 1px;
 }
 
 .social-and-link {
 	margin-top: 35px;
-	margin-right: 70px;
-	width: 158px;
+	margin-right: 107px;
 }
 
 .footer-social {
@@ -1036,7 +1132,7 @@ ul.footer-nav-second {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	margin-right: 4px;
+	margin-right: 5px;
 	position: relative;
 }
 
@@ -1057,17 +1153,17 @@ ul.footer-nav-second {
 }
 
 .footer-link p {
-	margin-top: 40px;
+	margin-top: 37px;
 }
 
 .link-mail {
-	padding-left: 10px;
-	width: 160px;
+	padding-left: 8px;
+	width: 152px;
 }
 
 .link-site {
-	padding-left: 30px;
-	width: 150px;
+	padding-left: 36px;
+	width: 111px;
 }
 
 .footer-link a {
@@ -1091,26 +1187,49 @@ ul.footer-nav-second {
 	padding: 0;
 	margin: 0;
 	display: flex;
-	min-height: 40px;
-	margin-top: 23px;
+	min-height: 38px;
+	margin-top: 21px;
 }
+
+.breadcrumbs-link {
+	margin-right: 39px;
+	position: relative;
+}
+
+.breadcrumbs-link:first-child {
+	margin-right: 55px; 
+}
+
+.link-last {
+	margin-right: 44px;
+}
+
 .breadcrumbs a {
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
 	color: #000000;
-	margin-right: 40px;
-	position: relative;
+	display: block;
+}
+
+.breadcrumbs-link svg {
+	position: absolute;
+	top: 2px;
+	left: -2px;
 }
 
 .breadcrumbs-link::after {
 	content: "";
 	position: absolute;
 	top: 2px;
-	right: -24px;
+	right: -26px;
 	width: 8px;
 	height: 12px;
 	background-image: url("../img/icon-right-small.svg");
+}
+
+.breadcrumbs-link:first-child::after {
+	right: -36px;
 }
 
 .name-catalog {
@@ -1123,10 +1242,10 @@ ul.footer-nav-second {
 	font-weight: normal;
 	padding: 0;
 	margin: 0;
-	padding-top: 33px;
-	padding-bottom: 35px;
-	padding-left: 30px;
-	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 29px;
+	padding-left: 28px;
+	margin-bottom: 26px;
 }
 
 .shoping-index {
@@ -1137,11 +1256,16 @@ ul.footer-nav-second {
 	margin-right: 20px;
 }
 
+.filters hr {
+	color: #999999;
+	margin-bottom: 18px;
+}
+
 .filters fieldset {
 	width: 220px;
 	padding: 0;
   	margin: 0;
-  	margin-bottom: 30px;
+  	margin-bottom: 22px;
   	border: none;
 }
 
@@ -1150,7 +1274,7 @@ ul.footer-nav-second {
 	line-height: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-bottom: 14px;
+	margin-bottom: 13px;
 }
 
 .filters ul {
@@ -1170,15 +1294,19 @@ ul.footer-nav-second {
 }
 
 .filter-option {
-	margin-bottom: 19px;
-	padding-left: 38px;
+	margin-bottom: 20px;
+	padding-left: 35px;
 	position: relative;
+}
+
+.filter-option:last-child {
+	margin-bottom: 0;
 }
 
 .filter-input-checkbox + label::before {
 	content: "";
 	position: absolute;
-	top: -3px;
+	top: 0px;
 	left: -35px;
 	width: 23px;
 	height: 23px;
@@ -1188,7 +1316,7 @@ ul.footer-nav-second {
 .filter-input-checkbox:checked + label::after {
 	content: "";
 	position: absolute;
-	top: -3px;
+	top: 0px;
 	left: -35px;
 	width: 27px;
 	height: 23px;
@@ -1198,8 +1326,8 @@ ul.footer-nav-second {
 .filter-input-radio + label::before {
 	content: "";
 	position: absolute;
-	top: -5px;
-	left: -35px;
+	top: -4px;
+	left: -36px;
 	width: 25px;
 	height: 25px;
 	background-image: url("../img/radio-off.svg");
@@ -1208,8 +1336,8 @@ ul.footer-nav-second {
 .filter-input-radio:checked + label::after {
 	content: "";
 	position: absolute;
-	top: -5px;
-	left: -35px;
+	top: -4px;
+	left: -36px;
 	width: 25px;
 	height: 25px;
 	background-image: url("../img/radio-on.svg");
@@ -1243,28 +1371,33 @@ ul.footer-nav-second {
 
 .catalog-item {
 	border: 1px solid #e5e5e5;
-	width: 219px;
-	margin-bottom: 20px;
-	min-height: 318px;
+	width: 218px;
+	margin-bottom: 18px;
+	min-height: 314px;
 	position: relative;
 }
 
 .new-item::before {
 	content: "";
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: -1px;
+	right: -1px;
 	width: 60px;
 	height: 59px;
 	background-image: url("../img/new-flag.png");
 }
 
+.catalog-item h3 {
+	padding: 0;
+	margin: 0;
+}
+
 .catalog-item-name {
 	display: block;
-	min-height: 40px;
 	padding: 0 25px;
-	margin-top: 10px;
-	margin-bottom: 15px;   
+	margin: 0;
+	margin-top: 0px;
+	margin-bottom: 12px;   
 	font-size: 18px;
 	line-height: 20px;
 	text-align: center;
@@ -1278,9 +1411,8 @@ ul.footer-nav-second {
   	text-align: center;
   	color: #999999;
   	display: block;
- 	min-height: 20px;
-    margin-top: 15px;
-    margin-bottom: 20px;
+ 	min-height: 18px;
+ 
     text-decoration: line-through;
 }
 
@@ -1291,9 +1423,13 @@ ul.footer-nav-second {
   	font-weight: bold;
 	position: relative;
 	width: 80px;
-	margin: 10px auto;
-	margin-bottom: 20px;
-	padding: 10px 30px;
+	margin-top: 10px;
+	margin-bottom: 21px;
+	margin-left: 42px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 35px;
+	padding-right: 25px;
 	color: white;
 	background: #ee3643;
 	border-radius: 3px;
