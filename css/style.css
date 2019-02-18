@@ -333,41 +333,17 @@ label[for=feedback-text] {
 /* Форма поиска */
 
 .header-search {
-	width: 253px;
-	display: flex;
-	align-items: stretch;
-	padding-left: 17px;
-}
-
-.header-search svg {
-	margin-top: 11px;
-	margin-right: 13px;
-	fill: white;
-	opacity: 0.3;
-}
-
-.header-search:hover svg {
-	opacity: 1;
+	position: relative;
 }
 
 .search-field {
 	border: none;
-	background-color: transparent;
 	outline: 0;
-	width: 100%;
-}
-
-.search-field:focus {
-	background-color: white;
-}
-
-.search-field:focus .header-search {
-	background-color: white;
-}
-
-
-.header-search:focus .search-icon {
-	fill: red;
+	width: 270px;
+	background-color: #293449;
+	padding-top: 12px;
+	padding-bottom: 11px;
+	padding-left: 49px;
 }
 
 .header-search input::placeholder {
@@ -376,6 +352,33 @@ label[for=feedback-text] {
 	line-height: 17px;
 }
 
+.search-icon {
+	position: absolute;
+	top: 12px;
+	left: 16px;
+	opacity: 0.3;
+	fill: white;
+}
+
+.search-field:hover {
+	background-color: #212a3a;
+}
+
+.search-field:hover + .search-icon {
+	opacity: 1;
+}
+
+.search-field:focus {
+	background-color: #ffffff;
+}
+
+.search-field:focus + .search-icon {
+	fill: #ee3643;
+	opacity: 1;
+}
+
+
+
 /* Закладки и корзина */
 
 .shop-panel-bookmarks {
@@ -383,7 +386,6 @@ label[for=feedback-text] {
 	padding-left: 44px;
 	padding-top: 12px;
 	position: relative;
-
 }
 
 .shop-panel-bookmarks::before {
@@ -1381,6 +1383,14 @@ ul.footer-nav-second {
   	border: none;
 }
 
+.filters .filter-energy {
+	width: 220px;
+	padding: 0;
+  	margin: 0;
+  	margin-bottom: 78px;
+  	border: none;
+}
+
 .filters legend {
 	font-size: 17px;
 	line-height: 30px;
@@ -1460,14 +1470,13 @@ ul.footer-nav-second {
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
-	padding-top: 12px;
-	padding-bottom: 11px;
-	padding-right: 39px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	padding-right: 38px;
 	padding-left: 39px;
 	border-radius: 3px;
 	background-color: white;
 	border: 1px solid #e5e5e5;
-	margin-top: 35px;
 }
 
 /* Каталог */
@@ -1484,7 +1493,7 @@ ul.footer-nav-second {
 .catalog-item {
 	border: 1px solid #e5e5e5;
 	width: 218px;
-	margin-bottom: 18px;
+	margin-bottom: 19px;
 	min-height: 314px;
 	position: relative;
 }
@@ -1540,12 +1549,13 @@ ul.footer-nav-second {
 	margin-left: 42px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 35px;
-	padding-right: 25px;
+	padding-left: 36px;
+	padding-right: 24px;
 	color: white;
 	background: #ee3643;
 	border-radius: 3px;
 }
+
 .new-price::after {
 	content: "";
 	position: absolute;
@@ -1566,29 +1576,31 @@ ul.footer-nav-second {
 	text-align: center;
 	visibility: hidden;
 	position: absolute;
+	top: 30px;
 }
 
 .catalog-item-buy {
 	position: relative;
+	margin-bottom: 18px;
 }
 
 .catalog-item-buy a {
 	color: white;
 	box-shadow: inset 0px -3px 0 0 #367315;
   	background-color: #63a63e;
-  	display: flex;
   	height: 38px;
   	width: 135px;
   	border-radius: 3px;
-  	justify-content: center;
-  	align-items: center;
-  	margin-bottom: 8px;
+  	padding-left: 49px;
+	padding-right: 46px;
+	padding-top: 10px;
+	padding-bottom: 10px;
   }
 
 .catalog-item-buy a:before {
 	content: "";
 	position: absolute;
-	top: 11px;
+	top: 0px;
 	left: 14px;
 	width: 15px;
 	height: 15px;
@@ -1598,9 +1610,8 @@ ul.footer-nav-second {
 
 .catalog-item:hover .catalog-item-option {
 	visibility: visible;
-	top: 43px;
+	top: 53px;
 	left: 0px;
-
 }
 
 .catalog-item:hover img {
@@ -1618,15 +1629,15 @@ ul.footer-nav-second {
 }
 
 .catalog-item-mark a {
-	display: flex;
+	display: block;
   	border-radius: 3px;
-  	justify-content: center;
-  	align-items: center;
 	color: #32425c;
 	border: 3px solid #63a63e;
   	background-color: white;
-  	height: 33px;
-  	width: 129px;
+  	padding-left: 32px;
+	padding-right: 30px;
+	padding-top: 9px;
+	padding-bottom: 6px;
 }
 
 .catalog-item-mark a:hover,
