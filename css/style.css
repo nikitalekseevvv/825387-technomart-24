@@ -1041,6 +1041,103 @@ label[for=feedback-text] {
   	background: #ee3643;
 }
 
+/* Стили для блоков с популярными товарами и производителями */
+
+.container-popular-items {
+	margin-top: 53px;
+}
+
+.container-name {
+	padding-top: 30px;
+	padding-bottom: 27px;
+	padding-left: 28px;
+	background-color: #f9f5f0;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.name-block {
+	font-family: "Cuprum", Tahoma, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #32425c;
+}
+
+.container-name .button {
+	position: absolute;
+	top: 25px;
+	right: 24px;
+	padding-left: 54px;
+	padding-right: 55px;
+}
+
+.container-popular-items .catalog-item:nth-child(3) {
+	margin-right: 20px;
+}
+
+.container-popular-items .catalog-item:nth-child(4) {
+	margin-right: 0px;
+}
+
+.container-popular-items .catalog-item {
+	border: 1px solid #e5e5e5;
+	width: 218px;
+	margin-bottom: 21px;
+	min-height: 314px;
+	position: relative;
+	margin-right: 20px;
+}
+
+.container-manufacturers .button {
+	padding-left: 69px;
+	padding-right: 69px;
+}
+
+.manufacturers-items {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.manufacturers-item img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.manufacturers-item {
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.manufacturers-item:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.manufacturers-item:hover {
+	box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturers-item:active {
+	box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.manufacturers-item:active img {
+	opacity: 0.3;
+}
+
+.manufacturers-item a {
+	display: block;
+	width: 220px;
+	height: 145px;
+	outline: 1px solid #eaeaea;
+	outline-offset: -1px;
+	position: relative;
+}
 
 /* Стили для контейнера с информацией */
 
@@ -1582,19 +1679,18 @@ ul.footer-nav-second {
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
-
 }
 
-.catalog-item {
+.catalog .catalog-item {
 	border: 1px solid #e5e5e5;
 	width: 218px;
-	margin-bottom: 19px;
+	margin-bottom: 20px;
 	min-height: 314px;
 	position: relative;
 	margin-right: 20px;
 }
 
-.catalog-item:nth-child(3n) {
+.catalog .catalog-item:nth-child(3n) {
 	margin-right: 0;
 }
 
@@ -1633,7 +1729,6 @@ ul.footer-nav-second {
   	color: #999999;
   	display: block;
  	min-height: 18px;
- 
     text-decoration: line-through;
 }
 
@@ -1645,7 +1740,7 @@ ul.footer-nav-second {
 	position: relative;
 	width: 80px;
 	margin-top: 10px;
-	margin-bottom: 21px;
+	margin-bottom: 20px;
 	margin-left: 42px;
 	padding-top: 10px;
 	padding-bottom: 10px;
