@@ -212,10 +212,11 @@
         <section class="main-contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a class="contacts-map" href="map.html">
+          <a class="modal-contacts-map" href="map.html">
             <img src="img/map-preview.jpg" width="300" height="158" alt="Схема проезда">
           </a>
           <a class="button" href="feedback.html">Заблудились? Напишите нам!</a>
+          <a class="button modal-feedback-button" href="feedback.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -281,16 +282,16 @@
 
     <section class="modal modal-map visually-hidden">
       <h2 class="visually-hidden">Карта проезда</h2>
-      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal-close modal-close-map" type="button"><span class="visually-hidden">Закрыть</span></button>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.691651853988!2d30.30295579681799!3d59.937569518566896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1550596911755" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
     <section class="modal modal-feedback visually-hidden">
       <div class="modal-block">
         <h2 class="visually-hidden">Написать нам</h2>
-        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="modal-close modal-close-feedback" type="button"><span class="visually-hidden">Закрыть</span></button>
         <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
           <ul>
-            <li class="feedback-first"><label for="feedback-name">Ваше имя:</label><input class="feedback-name" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия"></li>
+            <li class="feedback-first"><label for="feedback-name">Ваше имя:</label><input class="feedback-name" id="feedback-name" type="text" name="name-user" placeholder="Имя Фамилия"></li>
             <li><label for="feedback-email">Ваш e-mail:</label><input class="feedback-email" id="feedback-email" type="email" name="email" placeholder="email@example.com"></li>
             <li><label for="feedback-text">Текст письма:</label><textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea></li>
             <li class="feedback-button"><input class="button" id="feedback-submit" type="submit" value="Отправить"></li>
@@ -298,5 +299,38 @@
         </form>
       </div>
     </section>
+    <script type="text/javascript">
+      var linkMap = document.querySelector(".modal-contacts-map");
+      var popupMap = document.querySelector(".modal-map");
+      var closeMap = document.querySelector(".modal-close-map");
+      var linkFeedback = document.querySelector(".modal-feedback-button");
+      var popupFeedback = document.querySelector(".modal-feedback");
+      var closeFeedback = document.querySelector(".modal-close-feedback");  
+      var login = document.querySelector("[name=name-user]");    
+      
+      linkMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupMap.classList.remove("visually-hidden");
+      });
+
+      closeMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupMap.classList.add("visually-hidden");
+      });
+
+      linkFeedback.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupFeedback.classList.remove("visually-hidden");
+        login.focus();
+      });
+
+      closeFeedback.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupFeedback.classList.add("visually-hidden");
+      });
+
+
+    </script>
+
   </body>
 </html>

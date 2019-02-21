@@ -109,6 +109,11 @@ img {
 	cursor: pointer;
 }
 
+.modal-close:active {
+	border: none;
+	outline: 0;
+}
+
 .modal-feedback label {
 	font-family: "Cuprum", Tahoma, sans-serif;
 	font-size: 18px;
@@ -211,8 +216,6 @@ label[for=feedback-text] {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 620px;
-	top: 418px;
-	left: 50%;
 	background-color: white;
 	border-top: 7px solid #ee3643;
 	box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);

@@ -301,13 +301,33 @@
     <section class="modal modal-buy visually-hidden">
       <div class="modal-block-buy">
         <p>Товар добавлен в корзину</p>
-        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="modal-close modal-close-buy" type="button"><span class="visually-hidden">Закрыть</span></button>
         <div class="modal-buy-button">
           <a class="button" href="buy.html">Оформить заказ</a>
           <button class="button-buy" type="button">Продолжить покупки</button>
         </div>
       </div>
     </section>
+
+    <script type="text/javascript">
+      var linkBuy = document.querySelectorAll(".catalog-item-buy");
+      var popupBuy = document.querySelector(".modal-buy");
+      var closeBuy = document.querySelector(".modal-close-buy");  
+      
+      for (var i = 0; i < linkBuy.length; i++) {
+        linkBuy[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popupBuy.classList.remove("visually-hidden");
+        });
+      }
+
+      closeBuy.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popupBuy.classList.add("visually-hidden");
+      });
+
+
+    </script>
 
   </body>
 </html>
