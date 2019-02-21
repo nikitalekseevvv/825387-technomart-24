@@ -298,7 +298,7 @@
     </footer>
 
 
-    <section class="modal modal-buy visually-hidden">
+    <section class="modal modal-buy">
       <div class="modal-block-buy">
         <p>Товар добавлен в корзину</p>
         <button class="modal-close modal-close-buy" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -317,13 +317,23 @@
       for (var i = 0; i < linkBuy.length; i++) {
         linkBuy[i].addEventListener("click", function (evt) {
           evt.preventDefault();
-          popupBuy.classList.remove("visually-hidden");
+          popupBuy.classList.add("modal-show");
         });
       }
 
       closeBuy.addEventListener("click", function (evt) {
         evt.preventDefault();
-        popupBuy.classList.add("visually-hidden");
+        popupBuy.classList.remove("modal-show");
+      });
+        
+
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          if (popupBuy.classList.contains("modal-show")) {
+            evt.preventDefault();
+            popupBuy.classList.remove("modal-show");
+          }
+        }
       });
 
 
