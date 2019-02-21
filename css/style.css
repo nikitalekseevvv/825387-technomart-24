@@ -1102,16 +1102,99 @@ label[for=feedback-text] {
 	flex-wrap: wrap;
 }
 
-.manufacturers-item img {
+
+.item-bosch:before {
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background-image: url('../img/bosch.jpg');
+	width: 126px;
+	height: 37px;
+}
+
+.item-makita:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/makita.jpg');
+	width: 123px;
+	height: 40px;
+}
+
+.item-dewalt:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/dewalt.jpg');
+	width: 146px;
+	height: 44px;
+}
+
+.item-interscole:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/interscole.jpg');
+	width: 200px;
+	height: 88px;
+}
+
+.item-hitachi:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/hitachi.jpg');
+	width: 169px;
+	height: 31px;
+}
+
+.item-lg:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/lg.jpg');
+	width: 121px;
+	height: 73px;
+}
+
+.item-aeg:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/aeg.jpg');
+	width: 151px;
+	height: 96px;
+}
+
+.item-metabo:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../img/metabo.jpg');
+	width: 204px;
+	height: 69px;
 }
 
 .manufacturers-item {
 	margin-bottom: 20px;
 	margin-right: 20px;
+	position: relative;
 }
 
 .manufacturers-item:nth-child(4n) {
@@ -1136,7 +1219,6 @@ label[for=feedback-text] {
 	height: 145px;
 	outline: 1px solid #eaeaea;
 	outline-offset: -1px;
-	position: relative;
 }
 
 /* Стили для контейнера с информацией */
