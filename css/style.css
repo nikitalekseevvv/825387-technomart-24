@@ -62,10 +62,8 @@ img {
 /* Модальное окно с картой */
 
 @keyframes bounce {
-	0% {transform: translateY(-2000px);}
-	70% {transform: translateY(50px);}
-	90% {transform: translateY(-10px);}
-	100% {transform: translateY(0px);}
+	0% {transform: translate(-50%, -2000px);}
+	100% {transform: translate(-50%, -50%);}
 }
 
 .modal-map {
@@ -292,7 +290,7 @@ label[for=feedback-text] {
 .modal-show {
 	display: block;
 	animation-name: bounce;
-	animation-duration: 0.5s;
+	animation-duration: 0.3s;
 }
 
 /* Стили шапки */
