@@ -329,36 +329,6 @@
         </div>
       </div>
     </section>
-
-    <script type="text/javascript">
-      var linkBuy = document.querySelectorAll(".catalog-item-buy");
-      var popupBuy = document.querySelector(".modal-buy");
-      var closeBuy = document.querySelector(".modal-close-buy");  
-      
-      for (var i = 0; i < linkBuy.length; i++) {
-        linkBuy[i].addEventListener("click", function (evt) {
-          evt.preventDefault();
-          popupBuy.classList.add("modal-show");
-        });
-      }
-
-      closeBuy.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popupBuy.classList.remove("modal-show");
-      });
-        
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          if (popupBuy.classList.contains("modal-show")) {
-            evt.preventDefault();
-            popupBuy.classList.remove("modal-show");
-          }
-        }
-      });
-
-
-    </script>
-
+    <script src="js/script.min.js"></script>
   </body>
 </html>
