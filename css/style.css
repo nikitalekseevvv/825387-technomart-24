@@ -1424,14 +1424,8 @@ input:checked + .service-label {
 	display: none;
 }
 
-.service-button-one:checked ~ .service-item-delivery {
-    display: block;
-}
-
-.service-button-two:checked ~ .service-item-warranty {
-    display: block;
-}
-
+.service-button-one:checked ~ .service-item-delivery 
+.service-button-two:checked ~ .service-item-warranty, 
 .service-button-three:checked ~ .service-item-credit {
     display: block;
 }
@@ -1831,6 +1825,7 @@ ul.footer-nav-second {
 	padding-left: 18px;
 	padding-top: 11px;
 	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .filters {
@@ -1839,7 +1834,7 @@ ul.footer-nav-second {
 
 .filters hr {
 	color: #999999;
-	margin-bottom: 18px;
+	margin-bottom: 16px;
 }
 
 .filters fieldset {
@@ -1848,6 +1843,94 @@ ul.footer-nav-second {
   	margin: 0;
   	margin-bottom: 22px;
   	border: none;
+}
+
+.range-price {
+	position: relative;
+    height: 80px;
+    background: #f7f3ec;
+    border-radius: 3px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.range-scale {
+	height: 2px;
+    margin-top: 40px;
+    background: #d7dcde;
+}
+
+.range-bar {
+    width: 87%;
+    height: 2px;
+    background: #00ca74;
+    position: relative;
+}
+
+.range-bar:before {
+	content: "";
+	position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    background-color: #ababab;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.range-bar:after {
+	content: "";
+	position: absolute;
+    top: -10px;
+    right: -5px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid white;
+    background-color: #ababab;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.price-value {
+	margin-bottom: 2px;
+	display: flex;
+	position: relative;
+}
+
+.price-value input {
+	width: 90px;
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #f7f3ec;
+    border: none;
+    margin-top: 10px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    padding-left: 5px;
+}
+
+.price-min {
+	margin-right: 30px;
+}
+
+input.price-max {
+	width: 94px;
+	padding-left: 1px;
+}
+
+.price-value span {
+	position: absolute;
+	top: 20px;
+	left: 104px;
+	font-size: 16px;
+    line-height: 17px;
+    color: #444444;
 }
 
 .filters .filter-energy {
@@ -1887,6 +1970,10 @@ ul.footer-nav-second {
 	padding-left: 35px;
 	position: relative;
 	display: flex;
+}
+
+.filter-energy .filter-option {
+	margin-bottom: 23px;
 }
 
 .filter-option:last-child {
@@ -2003,7 +2090,7 @@ ul.footer-nav-second {
 	padding-left: 18px;
 	padding-top: 11px;
 	padding-bottom: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 19px;
 }
 
 .sorting fieldset {
@@ -2033,10 +2120,42 @@ ul.footer-nav-second {
 	margin-right: 60px;
 }
 
+.sorting-change label{
+	position: relative;
+}
+
+.sorting-change label[for=up]:before {
+	content: "";
+	position: absolute;
+	border: 6px solid transparent;	
+	border-bottom: 10px solid #c5c5c5;
+	top: -3px;
+	right: -58px;
+}
+
+.sorting-change label[for=down]:before {
+	content: "";
+	position: absolute;
+	border: 6px solid transparent;	
+	border-top: 10px solid #c5c5c5;
+	top: 3px;
+	right: -90px;
+}
+
+.sign-change:checked + label[for=up]:before {
+	border-bottom: 10px solid #ee3643;
+}
+
+.sign-change:checked + label[for=down]:before {
+	border-top: 10px solid #ee3643;
+}
+
+
 .sorting-sign label {
 	display: block:;
 	color: #adaba6;
 	border-bottom: 1px dotted #ee3643;
+
 }
 
 .sign-item:checked + label {
@@ -2219,6 +2338,50 @@ ul.footer-nav-second {
 .catalog-item-mark a:active {
 	border: 3px solid #32425c;
 	opacity: 0.3;
+}
+
+/* Стили счётчика страниц */
+
+.page-items {
+	display: flex;
+	margin-top: 32px;
+	margin-bottom: 60px;
+}
+
+.page-number {
+	display: block;
+	font-size: 13px;
+	line-height: 18px;
+	border-radius: 3px;
+	border: 1px solid #e5e5e5;
+	text-transform: uppercase;
+	color: black;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	padding-right: 14px;
+	margin-right: 10px;
+}
+
+.page-next {
+	padding-left: 31px;
+	padding-right: 32px;
+}
+
+.page-number:hover {
+	border: 1px solid #bdc6ca;
+}
+
+.page-number:active {
+	border: 1px solid #ee3643;
+}
+
+.page-one,
+.page-one:hover,
+.page-one:active {
+	background-color: #ee3643;
+	border-color: #ee3643;
+	color: white;
 }
 
 /* Стили блока о категории */
