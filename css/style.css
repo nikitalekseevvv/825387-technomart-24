@@ -1406,34 +1406,31 @@ label[for=feedback-text] {
 	font-weight: bold;
 	cursor: pointer;
 }
-
-input:checked + .service-label {
+.service-button-one:checked ~ .services-name .service-label[for=delivery],
+.service-button-two:checked ~ .services-name .service-label[for=warranty],
+ .service-button-three:checked ~ .services-name .service-label[for=credit]{
 	background-color: white;
 	color: #32425c;
 	box-shadow: none;
 }
+
 
 .service-label:hover {
 	color: white;
 	background-color: #293449;
 }
 
-.service-item-delivery,
-.service-item-credit,
-.service-item-warranty {
-	display: none;
+
+.service-button-one:not(:checked) ~ .service-information .service-item-delivery {
+    display: none;
 }
 
-.service-button-one:checked ~ .service-item-delivery {
-    display: block;
+.service-button-two:not(:checked) ~ .service-information .service-item-warranty {
+    display: none;
 }
 
-.service-button-two:checked ~ .service-item-warranty {
-    display: block;
-}
-
-.service-button-three:checked ~ .service-item-credit {
-    display: block;
+.service-button-three:not(:checked) ~ .service-information .service-item-credit {
+    display: none;
 }
 
 

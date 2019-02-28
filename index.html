@@ -202,21 +202,16 @@
         <h2>Сервисы</h2>
         <p class="services-info">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="services-slider">
+          
+          <input class="visually-hidden service-button-one" type="radio" id="delivery" name="service" value="delivery" checked> 
+          <input class="visually-hidden service-button-two" type="radio" id="warranty" name="service" value="warranty"> 
+          <input class="visually-hidden service-button-three" type="radio" id="credit" name="service" value="credit">
+          
           <div class="services-name">
-            <fieldset>
-              <ul>
-                <li class="service-option">
-                  <input class="visually-hidden service-button-one" type="radio" id="delivery" name="service" value="delivery" checked><label class="service-label" for="delivery">Доставка</label>
-                </li>
-                <li class="service-option">
-                  <input class="visually-hidden service-button-two" type="radio" id="warranty" name="service" value="warranty"><label class="service-label" for="warranty">Гарантия</label>
-                </li>
-                <li class="service-option">
-                  <input class="visually-hidden service-button-three" type="radio" id="credit" name="service" value="credit"><label class="service-label" for="credit">Кредит</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
+            <label class="service-label" for="delivery">Доставка</label>
+            <label class="service-label" for="warranty">Гарантия</label>
+            <label class="service-label" for="credit">Кредит</label>
+           </div>
           <div class="service-information">
             <div class="service-item-delivery">
             <span>Доставка</span>
