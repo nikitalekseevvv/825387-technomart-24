@@ -9,7 +9,10 @@
       var nameUserFeedback = popupFeedback.querySelector(".feedback-email");
       var emailFeedback = popupFeedback.querySelector(".feedback-name");  
       var textFeedback = popupFeedback.querySelector(".feedback-text"); 
+<<<<<<< HEAD
       var buttonFeedback = popupFeedback.querySelector(".button");  
+=======
+>>>>>>> parent of 44cf88d... Разметка и стили завершены
       var linkBuy = document.querySelectorAll(".catalog-item-buy");
       var popupBuy = document.querySelector(".modal-buy");
       var closeBuy = document.querySelector(".modal-close-buy");  

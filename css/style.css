@@ -1429,8 +1429,21 @@ label[for=feedback-text] {
     display: none;
 }
 
+<<<<<<< HEAD
 .service-button-three:not(:checked) ~ .service-information .service-item-credit {
     display: none;
+=======
+.service-button-one:checked ~ .service-item-delivery {
+    display: block;
+}
+
+.service-button-two:checked ~ .service-item-warranty {
+    display: block;
+}
+
+.service-button-three:checked ~ .service-item-credit {
+    display: block;
+>>>>>>> parent of 44cf88d... Разметка и стили завершены
 }
 
 
