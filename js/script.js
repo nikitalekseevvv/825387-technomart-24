@@ -1,18 +1,16 @@
-      var linkMap = document.querySelector(".modal-contacts-map");
+ var linkMap = document.querySelector(".modal-contacts-map");
       var popupMap = document.querySelector(".modal-map");
       var closeMap = document.querySelector(".modal-close-map");
       var linkFeedback = document.querySelector(".modal-feedback-button");
       var popupFeedback = document.querySelector(".modal-feedback");
       var closeFeedback = document.querySelector(".modal-close-feedback");  
-      var login = document.querySelector("[name=name-user]");
+     
       var formFeedback = popupFeedback.querySelector(".feedback");
       var nameUserFeedback = popupFeedback.querySelector(".feedback-email");
       var emailFeedback = popupFeedback.querySelector(".feedback-name");  
       var textFeedback = popupFeedback.querySelector(".feedback-text"); 
-<<<<<<< HEAD
       var buttonFeedback = popupFeedback.querySelector(".button");  
-=======
->>>>>>> parent of 44cf88d... Разметка и стили завершены
+      
       var linkBuy = document.querySelectorAll(".catalog-item-buy");
       var popupBuy = document.querySelector(".modal-buy");
       var closeBuy = document.querySelector(".modal-close-buy");  
@@ -67,7 +65,7 @@
         }
   });
 
-      for (var i = 0; i < linkBuy.length; i++) {
+    for (var i = 0; i < linkBuy.length; i++) {
         linkBuy[i].addEventListener("click", function (evt) {
           evt.preventDefault();
           popupBuy.classList.add("modal-show");

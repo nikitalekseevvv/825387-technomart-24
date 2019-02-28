@@ -88,6 +88,22 @@
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <span class="filter-header">Фильтр:</span>
+            <fieldset class="filter-price">
+              <legend>Цена:</legend>
+              <div class="range-price">
+                <div class="range-scale">
+                  <div class="range-bar">
+                  </div>
+                </div>
+              </div>
+              <div class="price-value">
+                <input class="price-min" type="text" name="price-min" value="0">
+                <span>&mdash;</span>
+                <input class="price-max" type="text" name="price-max" value="30000">
+              </div>
+
+            </fieldset>
+            <hr>
             <fieldset class="filter-manufacter">
               <legend>Производители:</legend>
               <ul>
@@ -132,9 +148,9 @@
             <input class="sign-item" id="type" type="radio" name="sign"><label for="type">По типу</label>
             <input class="sign-item" id="function" type="radio" name="sign"><label for="function">По функционалу</label>
           </fieldset>
-          <fieldset>
-            <input id="up" type="radio" name="change" checked><label for="up">Вверх</label>
-            <input id="down" type="radio" name="change"><label for="down">Вниз</label>
+          <fieldset class="sorting-change">
+            <input class="sign-change" id="up" type="radio" name="change" checked><label for="up"><span class="visually-hidden">Вверх</span></label>
+            <input class="sign-change" id="down" type="radio" name="change"><label for="down"><span class="visually-hidden">Вниз</span></label>
           </fieldset>
         </div>
 
@@ -249,6 +265,12 @@
               </ul>
             </li>
           </ul>
+          <div class="page-items">
+            <a class="page-number page-one" href="#">1</a>
+            <a class="page-number" href="#">2</a>
+            <a class="page-number" href="#">3</a>
+            <a class="page-number page-next" href="#">Следующая</a>
+          </div>
         </section>
       </div>
       <div class="about-item">
