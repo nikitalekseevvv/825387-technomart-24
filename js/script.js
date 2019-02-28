@@ -9,6 +9,7 @@
       var nameUserFeedback = popupFeedback.querySelector(".feedback-email");
       var emailFeedback = popupFeedback.querySelector(".feedback-name");  
       var textFeedback = popupFeedback.querySelector(".feedback-text"); 
+      var buttonFeedback = popupFeedback.querySelector(".button");  
       var linkBuy = document.querySelectorAll(".catalog-item-buy");
       var popupBuy = document.querySelector(".modal-buy");
       var closeBuy = document.querySelector(".modal-close-buy");  
@@ -57,7 +58,9 @@
       formFeedback.addEventListener("submit", function (evt) {
         if (!nameUserFeedback.value || !emailFeedback.value || !textFeedback.value) {
           evt.preventDefault();
-          popupFeedback.classList.add("modal-error");
+          buttonFeedback.classList.remove("modal-error");
+          buttonFeedback.offsetWidth = buttonFeedback.offsetWidth;
+          buttonFeedback.classList.add("modal-error");
         }
   });
 
