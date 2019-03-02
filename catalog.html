@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -87,6 +87,7 @@
       <div class="shoping-index">
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
+           <form>
             <span class="filter-header">Фильтр:</span>
             <fieldset class="filter-price">
               <legend>Цена:</legend>
@@ -137,8 +138,8 @@
               </ul>
             </fieldset>
             <input class="show-result" id="filters" type="submit" value="Показать">
+          </form>
         </section>
-
 
         <section class="catalog">
          <div class="sorting">
@@ -273,12 +274,12 @@
           </div>
         </section>
       </div>
-      <div class="about-item">
+      <article class="about-item">
         <div class="about-item-center">
           <span>Пара слов о перфораторах</span>
           <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
-      </div>
+      </article>
     </main>
   
     <footer class="main-footer">
@@ -351,6 +352,7 @@
         </div>
       </div>
     </section>
-    <script src="js/script.min.js"></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
@@ -80,27 +80,19 @@
             <a class="category-button" href="#">На все случаи</a>
           </article>
           <article class="category-slider">
-            <form>
-              <ul>
-                <li>
-                    <input class="slider-radio" type="radio" id="slider-one" name="slider" value="slider-one">
-                </li>
-                <li>
-                    <input class="slider-radio" type="radio" id="slider-two" name="slider" value="slider-two" checked>
-                </li>
-              </ul>
-              </form>
-            <div class="slider-one">
-            <span>Дрели</span>
-              <p>Соседям на радость!</p>
-              <a class="button" href="#">Открыть каталог</a>
-              <button class="slider-button slider-left" type="button"></button>
-              <button class="slider-button slider-right" type="button"></button>
+             <input class="slider-radio slider-radio-one" type="radio" id="slider-one" name="slider">
+             <input class="slider-radio slider-radio-two" type="radio" id="slider-two" name="slider" checked>
+             <label for="slider-one" class="slider-button slider-left"><span class="visually-hidden">Слайдер влево</span></label>
+             <label for="slider-two" class="slider-button slider-right"><span class="visually-hidden">Слайдер вправо</span></label>
+             <div class="slider-one">
+              <span>Перфораторы</span>
+              <p>Настоящие мужские игрушки</p>
+              <a class="button" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="slider-two">
-            <span>Перфораторы</span>
-              <p>Настоящие мужские игрушки</p>
-              <a class="button" href="#">Открыть каталог</a>
+              <span>Дрели</span>
+              <p>Соседям на радость!</p>
+              <a class="button" href="catalog.html">Открыть каталог</a>
             </div>
           </article>
         </div>
@@ -127,7 +119,7 @@
           <a class="button" href="catalog.html">Все популярные товары</a>
         </div>
         <div class="popular-item">
-          <ul class="catalog-list">
+          <ul class="catalog-list catalog-list-main">
             <li class="catalog-item">
               <img src="img/shop-item-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">         
               <h3>
