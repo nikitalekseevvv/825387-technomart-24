@@ -1404,7 +1404,8 @@ label[for=feedback-text] {
 	width: 940px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 65px;
+	padding: 65px 0;
+	box-sizing: border-box;
 }
 .service-center h2 {
 	margin-bottom: 25px;
@@ -1449,11 +1450,15 @@ label[for=feedback-text] {
 	line-height: 36px;
 	color: #32425c;
 	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
 }
 
 .service-information p {
 	margin-top: 24px;
 	display: block;
+	position: relative;
+	z-index: 1;
 }
 
 .service-item-delivery p {
@@ -1480,6 +1485,7 @@ label[for=feedback-text] {
 .service-item-credit:before {
 	content: "";
 	position: absolute;
+	z-index: 0;
 }
 
 .service-item-delivery:before {
