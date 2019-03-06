@@ -1152,6 +1152,11 @@ label[for=feedback-text] {
 	z-index: 3;
 }
 
+.slider-button:focus,
+.slider-button:active {
+	opacity: 0.7;
+}
+
 .slider-left {
 	background-image: url("../img/icon-left.svg");
 	left: 25px;
@@ -1174,6 +1179,11 @@ label[for=feedback-text] {
 	position: absolute;
 	z-index: 2;
 	bottom: 36px;
+}
+
+.slider-radio:focus,
+.slider-radio:active {
+	opacity: 0.7;
 }
 
 .slider-radio-one {
@@ -1382,8 +1392,12 @@ label[for=feedback-text] {
 	        box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.manufacturers-item:active img {
+.manufacturers-item:active {
 	opacity: 0.3;
+}
+
+.manufacturers-item a:focus {
+	outline: auto;
 }
 
 .manufacturers-item a {
@@ -1638,11 +1652,8 @@ p.about-us-delivery {
 	margin-bottom: 30px;
 }
 
-.main-contacts img {
-	margin-bottom: 33px;
-}
-
 .main-contacts .button {
+	margin-top: 33px;
 	padding-left: 50px;
 	padding-right: 44px;
 }
@@ -1920,6 +1931,10 @@ ul.footer-nav-second {
 
 .breadcrumbs-link:first-child {
 	margin-right: 55px; 
+}
+
+.link-svg:focus svg {
+	outline: auto;
 }
 
 .link-last {
@@ -2241,6 +2256,10 @@ input.price-max {
 	opacity: 0.3;
 }
 
+.filter-input:focus + label {
+	opacity: 0.7;
+}
+
 .show-result {
 	font-size: 13px;
 	line-height: 18px;
@@ -2370,6 +2389,7 @@ input.price-max {
 	position: relative;
 	margin-right: 20px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .catalog .catalog-item:nth-child(3n) {
