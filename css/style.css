@@ -2051,7 +2051,7 @@ ul.footer-nav-second {
     position: relative;
 }
 
-.range-bar:before {
+.range-one {
 	content: "";
 	position: absolute;
     top: -10px;
@@ -2066,7 +2066,7 @@ ul.footer-nav-second {
             box-shadow: 0 2px 1px 0px rgba(0, 0, 0, 0.3);
 }
 
-.range-bar:after {
+.range-two {
 	content: "";
 	position: absolute;
     top: -10px;
