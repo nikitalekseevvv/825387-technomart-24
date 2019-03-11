@@ -916,6 +916,7 @@ label[for=feedback-text] {
 }
 
 .main-nav-item:last-child {
+	padding-right: 27px;
 	padding-left: 33px;
 }
 
@@ -2288,8 +2289,8 @@ input.price-max {
 	text-transform: uppercase;
 	padding-left: 18px;
 	padding-top: 11px;
-	padding-bottom: 10px;
-	margin-bottom: 19px;
+	height: 27px;
+	margin-bottom: 20px;
 }
 
 .sorting fieldset {
