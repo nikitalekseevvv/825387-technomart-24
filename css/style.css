@@ -379,10 +379,12 @@ label[for=feedback-text] {
 }
 
 /* Стили шапки */
+
 .main-header-panel {
 	width: 100%;
 	background-color: #293449;
 }
+
 .main-header {
 	background-color: #f4f7f9;
 	font-family: "Cuprum", Tahoma, sans-serif;
@@ -397,7 +399,7 @@ label[for=feedback-text] {
 	width: 940px;
 	padding-left: 10px;
 	padding-right: 10px;
-	height: 42px;
+	min-height: 42px;
 	margin-bottom: 47px;
 	margin-right: auto;
 	margin-left: auto;
@@ -460,32 +462,32 @@ label[for=feedback-text] {
 	width: 270px;
 	background-color: #293449;
 	padding-top: 12px;
-	padding-bottom: 10px;
+	padding-bottom: 11px;
 	padding-left: 49px;
 }
 
 .header-search input::-webkit-input-placeholder {
 	color: white;
 	font-size: 17px;
-	line-height: 17px;
+	line-height: 18px;
 }
 
 .header-search input:-ms-input-placeholder {
 	color: white;
 	font-size: 17px;
-	line-height: 17px;
+	line-height: 18px;
 }
 
 .header-search input::-ms-input-placeholder {
 	color: white;
 	font-size: 17px;
-	line-height: 17px;
+	line-height: 18px;
 }
 
 .header-search input::placeholder {
 	color: white;
 	font-size: 17px;
-	line-height: 17px;
+	line-height: 18px;
 }
 
 .search-icon {
@@ -512,8 +514,6 @@ label[for=feedback-text] {
 	fill: #ee3643;
 	opacity: 1;
 }
-
-
 
 /* Закладки и корзина */
 
@@ -639,7 +639,7 @@ label[for=feedback-text] {
 }
 
 .header-info-contacts {
-	margin-left: 67px;
+	margin-left: 66px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -663,8 +663,8 @@ label[for=feedback-text] {
 	border: 3px solid #ffffff;
 	padding-top: 9px;
 	padding-bottom: 8px;
-	padding-right: 49px;
-	padding-left: 71px;
+	padding-right: 48px;
+	padding-left: 72px;
 	margin-bottom: 5px;
 }
 
@@ -672,7 +672,7 @@ label[for=feedback-text] {
 	content: "";
 	position: absolute;
 	left: 12px;
-	top: 10px;
+	top: 9px;
 	width: 19px;
 	height: 19px;
 	background-image: url("../img/icon-phone.svg");
@@ -749,8 +749,8 @@ label[for=feedback-text] {
 
 .check-in-link {
 	display: block;
-	padding-left: 24px;
-	padding-right: 24px;
+	padding-left: 25px;
+	padding-right: 23px;
 }
 
 .username-panel {
