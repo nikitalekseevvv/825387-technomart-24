@@ -2320,7 +2320,7 @@ input.price-max {
 	margin-right: 60px;
 }
 
-.sorting-change label{
+.sorting-change {
 	position: relative;
 }
 
@@ -2354,7 +2354,6 @@ input.price-max {
 .sorting-sign label {
 	color: #adaba6;
 	border-bottom: 1px dotted #ee3643;
-
 }
 
 .sign-item:checked + label {
