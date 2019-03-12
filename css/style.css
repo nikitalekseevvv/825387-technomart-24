@@ -754,8 +754,8 @@ label[for=feedback-text] {
 }
 
 .username-panel {
-	width: 300px;
-	margin-left: 50px;
+	width: 297px;
+	margin-left: 53px;
 }
 
 .username-block {
@@ -776,7 +776,7 @@ label[for=feedback-text] {
 	width: 20px;
 	height: 18px;
 	top: 12px;
-	left: 15px;
+	left: 12px;
 	background-image: url(../img/icon-user.svg);
 	opacity: 0.3;
 }
@@ -790,7 +790,7 @@ label[for=feedback-text] {
 	line-height: 21px;
 	color: #000000;
 	display: block;
-	margin-left: 48px;
+	margin-left: 45px;
 	margin-top: 11px;
 	margin-bottom: 13px;
 }
@@ -821,7 +821,7 @@ label[for=feedback-text] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-left: 20px;
+	margin-left: 17px;
 }
 
 .user-nav-option a {
